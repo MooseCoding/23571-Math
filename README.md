@@ -45,32 +45,16 @@ Copy and paste into any file of your choice in Java or Kotlin (and just use the 
 From there you can write helper functions like I did to get an index of the lookup table from a distance. 
 
 ```kotlin
-/*
-@Param -- Distance: Double away from center of classifier, aka sqrt of (x - goalX)^2 + (y - goalY)^2
-where goalX = 138 if its on the red alliance or 6 if its on the blue alliance and where goalY = 136 
-
-@Returns -- Index to grab from the array of values for hood position and flywheel power
- */
-fun getIndex(distance:Double): Int {
-    return ((RoundToHalf(distance)*2).toInt())
+fun lerp(t:Double, low: DoubleArray, high: DoubleArray):DoubleArray {
+    val hood = low[0] + t*(high[0] - low[0])
+    val flywheel = low[1]+t*(high[1]-low[1])
+    return doubleArrayOf(hood, flywheel)
 }
 
-/*
-@Param -- Value: some double
-
-@Returns -- Value rounded to the nearest 0.5
-
-Your code may use different if you use a different increment than 0.5 
- */
-fun RoundToHalf(value:Double): Double {
-    val f = floor(value)
-    val decimal = value-f
-
-    return when {
-        decimal > 0.5 -> f // Returns the floor
-        decimal < 0.75 -> 0.5+f // Returns half of the floor
-        else -> 1.0+f
-    }
+fun getValues(distance:Double): DoubleArray {
+    val high: Int = Math.ceil(distance).toInt()
+    val low: Int = Math.floor(distance).toInt()
+    return lerp(distance-low, points[low], points[high])
 }
 ```
 
