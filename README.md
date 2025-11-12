@@ -16,7 +16,7 @@ OR
 
 You can use the Google Colab link and copy it into your drive
 
-[Colab](https://colab.research.google.com/drive/1qrTq7R3H0MQH1yPb6HKURfo0GvzGhuGH?usp=sharing)
+[Colab](https://colab.research.google.com/drive/1qrTq7R3H0MQH1yPb6HKURfo0GvzGhuGH?usp=sharing), where the first cell is equivalent to [regression.py](https://github.com/MooseCoding/23571-Math/blob/main/regression.py) and the second cell is equivalent to [values.py](https://github.com/MooseCoding/23571-Math/blob/main/values.py). 
 
 ## 1. Manual Data Set
 
