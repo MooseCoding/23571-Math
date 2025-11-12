@@ -16,11 +16,11 @@ Record the flywheel power and hood position that you used in order to obtain you
 
 ## 2. Find Your Regression
 
-Plug in your data in [[https://github.com/MooseCoding/23571-Math/blob/main/regression.py]] where it says to put in your hood position, flywheel power and your constraints. Then run the program and the resultant graph would look great in a portfolio and the equation it spits out is important. You can change the polynomial degree but the builtin solver I provide in the other [[https://github.com/MooseCoding/23571-Math/blob/main/values.py]] only takes in a quadratic expression.
+Plug in your data in [regression.py](https://github.com/MooseCoding/23571-Math/blob/main/values.py) where it says to put in your hood position, flywheel power and your constraints. Then run the program and the resultant graph would look great in a portfolio and the equation it spits out is important. You can change the polynomial degree but the builtin solver I provide in the other [values.py](https://github.com/MooseCoding/23571-Math/blob/main/values.py) only takes in a quadratic expression.
 
 ## 3. Find Values For Distance
 
-So plugin your values for a,b,c for the expression $ax^2 + bx + c = f(x)$, where x is the hood position into [[https://github.com/MooseCoding/23571-Math/blob/main/values.py]] Yes your b and c terms may involve y but that is fine. From there make sure that you plugin your start distance (recommended min is 6, which is as close to center as possible) and the end distance (recommended distance is 144 sqrt 2 since thats literally the maximum fire distance). Also specify the step size between the two distances. From there add in your flywheel constraints from earlier leave the (x,x,1000) part the same though. Then run the program and tada your lookup table. 
+So plugin your values for a,b,c for the expression $ax^2 + bx + c = f(x)$, where x is the hood position into [values.py](https://github.com/MooseCoding/23571-Math/blob/main/values.py) Yes your b and c terms may involve y but that is fine. From there make sure that you plugin your start distance (recommended min is 6, which is as close to center as possible) and the end distance (recommended distance is 144 sqrt 2 since thats literally the maximum fire distance). Also specify the step size between the two distances. From there add in your flywheel constraints from earlier leave the (x,x,1000) part the same though. Then run the program and tada your lookup table. 
 
 ## 4. Find Home For Array
 
