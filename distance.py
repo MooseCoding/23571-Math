@@ -1,10 +1,10 @@
 import numpy as np
 
-# Solve quadratic in x for given k and y
+# Solve the quadratic for X
 def solve_for_x(k, y):
-    a = -283.3333
-    b = 98.7865 + 0.1838 * y
-    c = -200.1912 + 0.3383 * y - 0.0001*y**2 - k
+    a = -283.3333 # Plug in your value for A
+    b = 98.7865 + 0.1838 * y # Plug in your value for B
+    c = -200.1912 + 0.3383 * y - 0.0001*y**2 - k # Plug in your value for C 
 
     disc = b**2 - 4*a*c
     if disc < 0:
@@ -12,18 +12,16 @@ def solve_for_x(k, y):
     sqrt_disc = np.sqrt(disc)
     x1 = (-b + sqrt_disc) / (2*a)
     x2 = (-b - sqrt_disc) / (2*a)
-    # pick root with smaller absolute value
     for x in [x1, x2]:
         if np.isfinite(x):
             return x
     return None
-
-# Step size for k
-k_values = np.arange(6, 204, 0.5)
+    
+k_values = np.arange(6, 204, 0.5) # Plug in your start of data, end of data, and the step size of your data
 points = []
 
-# Scan y between 750 and 2000
-y_scan = np.linspace(750, 2000, 1000)  # fine grid
+# Scan y between 750 and 2000, but yours may be a little less or more
+y_scan = np.linspace(750, 2000, 1000) # My flywheels start at around 750 and can go to around 2000 comfortably 
 
 for k in k_values:
     found = False
