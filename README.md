@@ -6,7 +6,11 @@ Make sure that you have the following installed with Pip:
 - SciPY
 - SciKit-Learn
 - Matplotlib
-- Numpy 
+- Numpy
+
+```bash
+pip install numpy scikit-learn matplotlib scipy
+```
 
 ## 1. Manual Data Set
 
