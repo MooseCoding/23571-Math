@@ -64,7 +64,7 @@ Here's my implementation of this
 
 ```kotlin
   val dist: Double = sqrt((goalX-currentX).pow(2) + (goalY-currentY).pow(2)) // Current distance from the goal
-  val values: DoubleArray = Aimbot.points[getIndex(dist)] // This is my lookup table
+  val values: DoubleArray = Aimbot.getValues(dist)
 
   Hood.updatePosition(values[0])  // The hood position
   Flywheels.updatePid(values[1]) // The target velocity 
