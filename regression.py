@@ -6,9 +6,9 @@ from mpl_toolkits.mplot3d import Axes3D
 
 # === Step 1: Enter your discrete data points ===
 # Replace these with your actual data
-x = np.array([0.3,0.5,0.5,0.2,0.1,0.65]) # These are your hood positions
-y = np.array([950,900,850,850,850,1220]) # These are your flywheel powers
-f = np.array([59, 59,49,32,15,107])  # These are your distances
+x = np.array([0.3,0.5,0.5,0.2,0.1,0.65]) # These are your hood positions in servo position units 
+y = np.array([950,900,850,850,850,1220]) # These are your flywheel powers in the getVelocity() units
+f = np.array([59, 59,49,32,15,107])  # These are your distances measured in inches
 
 # === Step 2: Choose polynomial degree ===
 degree = 2 # Try 2 for quadratic, 3 for cubic, etc.
